@@ -1,5 +1,5 @@
-require("babel-register");
-require("babel-polyfill");
+require("@babel/register");
+require("@babel/polyfill");
 
 module.exports = {
   networks: {
@@ -10,8 +10,8 @@ module.exports = {
         network_id: "*", // Match any network id
       },
     },
-    contracts_directory: "./src/contracts/",
-    contracts_build_directory: "./src/data/",
+    contracts_directory: "./src/contracts",
+    contracts_build_directory: "./src/data",
     compilers: {
       solc: {
         optimizer: {
