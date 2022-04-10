@@ -10,8 +10,6 @@ module.exports = {
         network_id: "*"
       }
     },
-    contracts_directory: "./src/contracts",
-    contracts_build_directory: "./src/data",
     compilers: {
       solc: {
         optimizer: {
