@@ -1,0 +1,427 @@
+{
+  "contractName": "Transactions",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculationXYK",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "payTransctions",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"calculationXYK\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"payTransctions\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Transactions.sol\":\"Transactions\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Transactions.sol\":{\"keccak256\":\"0x404b897aab16ce935b10136f90e2a5c34424bc2fb6832cd78ebc002bf04ae4b0\",\"urls\":[\"bzz-raw://df7dfc5ce5846511d37f600daf8d01f2dc7e33829dcec3a8051aeb4e0a60a1d3\",\"dweb:/ipfs/QmddYES3ynDCgg6d9BPXDqp5yMqFojZAzGDHSCWKsJeukn\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060c58061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80632b2df86d146037578063c163de2a146082575b600080fd5b608060048036036040811015604b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050608a565b005b6088608e565b005b5050565b56fea265627a7a723158202fc6aaddcdc02c69b76bf51883e698d339c23969215ddcd4bc0e9d3244a8e31664736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80632b2df86d146037578063c163de2a146082575b600080fd5b608060048036036040811015604b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050608a565b005b6088608e565b005b5050565b56fea265627a7a723158202fc6aaddcdc02c69b76bf51883e698d339c23969215ddcd4bc0e9d3244a8e31664736f6c63430005100032",
+  "sourceMap": "69:535:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:535:2;;;;;;;",
+  "deployedSourceMap": "69:535:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:535:2;;;;;;;;;;;;;;;;;;;;;;;;460:80;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;460:80:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;548:43;;;:::i;:::-;;460:80;;;:::o;548:43::-;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract Transactions {\r\n\r\n    // event Transfer (address sender, address receiver, uint amount, string message, uint256 timestamp, string keyword);\r\n\r\n    // function publishTransaction(address payable receiver, uint amount, string memory message, string memory keyword) public {\r\n    //     emit Transfer(msg.sender, receiver, amount, message, block.timestamp, keyword); \r\n    // }\r\n\r\n    function calculationXYK(address payable receiver, uint amount) public {\r\n\r\n    }\r\n\r\n    function payTransctions() public {\r\n\r\n    }\r\n\r\n    \r\n\r\n}",
+  "sourcePath": "C:\\Users\\USER\\Documents\\Code Practice\\Portfolio\\Ethereum\\amm_system\\contracts\\Transactions.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Transactions.sol",
+    "exportedSymbols": {
+      "Transactions": [
+        66
+      ]
+    },
+    "id": 67,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 53,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 66,
+        "linearizedBaseContracts": [
+          66
+        ],
+        "name": "Transactions",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 60,
+              "nodeType": "Block",
+              "src": "530:10:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 61,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculationXYK",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 58,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55,
+                  "name": "receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 61,
+                  "src": "484:24:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 54,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "484:15:2",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 57,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 61,
+                  "src": "510:11:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 56,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "510:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "483:39:2"
+            },
+            "returnParameters": {
+              "id": 59,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "530:0:2"
+            },
+            "scope": 66,
+            "src": "460:80:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 64,
+              "nodeType": "Block",
+              "src": "581:10:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 65,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "payTransctions",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 62,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "571:2:2"
+            },
+            "returnParameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "581:0:2"
+            },
+            "scope": 66,
+            "src": "548:43:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 67,
+        "src": "69:535:2"
+      }
+    ],
+    "src": "33:571:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Transactions.sol",
+      "exportedSymbols": {
+        "Transactions": [
+          66
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 53,
+        "name": "PragmaDirective",
+        "src": "33:32:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            66
+          ],
+          "name": "Transactions",
+          "scope": 67
+        },
+        "children": [
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "calculationXYK",
+              "scope": 66,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "receiver",
+                      "scope": 61,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 54,
+                        "name": "ElementaryTypeName",
+                        "src": "484:15:2"
+                      }
+                    ],
+                    "id": 55,
+                    "name": "VariableDeclaration",
+                    "src": "484:24:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "amount",
+                      "scope": 61,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 56,
+                        "name": "ElementaryTypeName",
+                        "src": "510:4:2"
+                      }
+                    ],
+                    "id": 57,
+                    "name": "VariableDeclaration",
+                    "src": "510:11:2"
+                  }
+                ],
+                "id": 58,
+                "name": "ParameterList",
+                "src": "483:39:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 59,
+                "name": "ParameterList",
+                "src": "530:0:2"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 60,
+                "name": "Block",
+                "src": "530:10:2"
+              }
+            ],
+            "id": 61,
+            "name": "FunctionDefinition",
+            "src": "460:80:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "payTransctions",
+              "scope": 66,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 62,
+                "name": "ParameterList",
+                "src": "571:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 63,
+                "name": "ParameterList",
+                "src": "581:0:2"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 64,
+                "name": "Block",
+                "src": "581:10:2"
+              }
+            ],
+            "id": 65,
+            "name": "FunctionDefinition",
+            "src": "548:43:2"
+          }
+        ],
+        "id": 66,
+        "name": "ContractDefinition",
+        "src": "69:535:2"
+      }
+    ],
+    "id": 67,
+    "name": "SourceUnit",
+    "src": "33:571:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.6",
+  "updatedAt": "2022-04-11T14:18:26.123Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
