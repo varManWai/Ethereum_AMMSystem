@@ -1,5 +1,5 @@
-const Uniswap = artifacts.require("Uniswap");
+const LiquidityPool = artifacts.require("LiquidityPool");
 
 module.exports = function (deployer) {
-  deployer.deploy(Uniswap);
+  deployer.deploy(LiquidityPool);
 };
