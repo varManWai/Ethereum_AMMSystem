@@ -1,108 +1,14 @@
-//SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.22 <0.9.0;
 
-//Solidity library aimed at dealing with int overflow attack
-library SafeMath {
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-      assert(b <= a);
-      return a - b;
-    }
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-      uint256 c = a + b;
-      assert(c >= a);
-      return c;
-    }
+contract Token is ERC20 {
+  constructor(
+    string memory name,
+    string memory symbol,
+    uint256 initialSupply
+  ) ERC20(name, symbol) {
+    _mint(msg.sender, initialSupply);
+  }
 }
-
-
-interface IERC20 {
-
-    function totalSupply() external view returns (uint256);
-    function balanceOf(address account) external view returns (uint256);
-    function allowance(address owner, address spender) external view returns (uint256);
-
-    function transfer(address recipient, uint256 amount) external returns (bool);
-    function approve(address spender, uint256 amount) external returns (bool);
-    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
-
-    event Transfer(address indexed from, address indexed to, uint256 value);
-    event Approval(address indexed owner, address indexed spender, uint256 value);
-}
-
-
-contract myToken is IERC20 {
-
-    using SafeMath for uint256;
-
-    string public constant name = "SampleToken";
-    string public constant symbol = "SMT";
-    uint8 public constant decimals = 18;
-
-    //hold token balance of each owner account
-    mapping(address => uint256) balances;
-
-    //include all accounts approved to withdraw from a given acc tgt w/ the withdrawal sum allowed for each
-    mapping(address => mapping (address => uint256)) allowed;
-
-    //total amount of tokens : called by Ethereum right after contract is deployed
-    uint256 totalSupply_;
-
-    //constructor(uint256 total) public {
-    //    totalSupply_ = total;
-    //    balances[msg.sender] = totalSupply_; //assign all tokens to contract owner
-    //}
-
-    constructor() public {
-        totalSupply_ = 100000;
-        balances[msg.sender] = totalSupply_;
-        emit Transfer(address(0), msg.sender, totalSupply_);
-    }
-
-    //get total token supply regardless of owner
-    function totalSupply() public override view returns (uint256) {
-        return totalSupply_;
-    }
-
-    //get current token balance of owner
-    function balanceOf(address tokenOwner) public override view returns (uint256) {
-        return balances[tokenOwner];
-    }
-
-    //transfer tokens to another acc
-    function transfer(address receiver, uint256 numTokens) public override returns (bool) {
-        require(numTokens <= balances[msg.sender]);
-        balances[msg.sender] = balances[msg.sender].sub(numTokens);
-        balances[receiver] = balances[receiver].add(numTokens);
-        emit Transfer(msg.sender, receiver, numTokens);
-        return true;
-    }
-
-    //approve user to withdraw tokens
-    function approve(address delegate, uint256 numTokens) public override returns (bool) {
-        allowed[msg.sender][delegate] = numTokens;
-        emit Approval(msg.sender, delegate, numTokens);
-        return true;
-    }
-
-    //get num of tokens approved for withdrawal
-    function allowance(address owner, address delegate) public override view returns (uint) {
-        return allowed[owner][delegate];
-    }
-
-    //peer of approve function : allows a delegate approved for withdrawal to transfer owner tokens to a third party
-    function transferFrom(address owner, address buyer, uint256 numTokens) public override returns (bool) {
-        require(numTokens <= balances[owner]);
-        require(numTokens <= allowed[owner][msg.sender]);
-
-        balances[owner] = balances[owner].sub(numTokens);
-        allowed[owner][msg.sender] = allowed[owner][msg.sender].sub(numTokens);
-        balances[buyer] = balances[buyer].add(numTokens);
-        emit Transfer(owner, buyer, numTokens);
-        return true;
-    }
-}
-
-
-
-//https://dev.to/abdulmaajid/how-to-create-an-erc20-token-in-solidity-1a9h
