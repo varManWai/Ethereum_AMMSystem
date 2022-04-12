@@ -1,5 +1,5 @@
-const LiquidityPool = artifacts.require("LiquidityPool");
+const Token = artifacts.require("Token");
 
 module.exports = function (deployer) {
-  deployer.deploy(LiquidityPool);
+  deployer.deploy(Token);
 };
