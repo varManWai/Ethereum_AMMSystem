@@ -9,7 +9,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" exact element={<Uniswap />}></Route>
-        <Route path="/new-meetup" element={<Pools />}></Route>
+        <Route path="/pools" element={<Pools />}></Route>
       </Routes>
     </Layout>
   );

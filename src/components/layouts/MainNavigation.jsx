@@ -9,19 +9,20 @@ function MainNavigation() {
         <header className={classes.header}>
             <div className={classes.logo}>SwapSwap</div>
             <nav>
+
                 <ul>
-                    <li>
-                        <ul>
-                            <li>
-                                <Link to='/'>Swap</Link>
-                            </li>
-                            <li>
-                                <Link to='/'>Pool</Link>
-                            </li>
-                        </ul>
+                    <li >
+                        <Link to='/'>Swap</Link>
                     </li>
                     <li>
-                        <Link to='/new-meetup'>Connect</Link>
+                        <Link to='/pools'>Pool</Link>
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to='/'>Connect</Link>
                     </li>
                 </ul>
             </nav>
