@@ -1,10 +1,10 @@
 import React from 'react';
-
+import SwapForm from '../components/exchanges/SwapForm';
 
 const Uniswap = () => {
     return ( 
         <React.Fragment>
-            <h2>helloword</h2>
+            <SwapForm></SwapForm>
         </React.Fragment>
     );
 }
